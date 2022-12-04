@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: #0f0f0f;
+  display: grid;
+  grid-template-columns: 70px 1fr;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  padding: 8px 16px;
+  align-items: center;
+}
+header .header-left {
+  display: flex;
+  align-items: center;
+}
+header .header-left .logo {
+  width: 110px;
+  height: 20px;
+  padding: 0 10px;
+}
+header .header-center {
+  display: flex;
+}
+header .header-center .container {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+}
+header .header-center .container .search-field {
+  border: 2px solid #303030;
+  padding-left: 20px;
+  border-radius: 50px 0 0 50px;
+  border-right: 0;
+}
+header .header-center .container form input {
+  width: 562px;
+  height: 36px;
+  font-size: 18px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+header .header-center .container form input:focus {
+  outline: none;
+  border: none;
+}
+header .header-center .container button {
+  background-color: #222222;
+  border: 2px solid #303030;
+  border-radius: 0 50px 50px 0;
+  height: 40px;
+  width: 60px;
+  cursor: pointer;
+}
+header button:hover,
+header .header-center .voice-button button:hover {
+  background-color: #272727;
+}
+header .header-center .container button img {
+  width: 28px;
+}
+header .header-center .voice-button button {
+  background-color: #181818;
+  margin-left: 10px;
+}
+header .header-right {
+  display: flex;
+  padding-right: 20px;
+}
+header .header-right button {
+  margin-left: 10px;
+}
+header .header-right .avtar button {
+  font-size: 24px;
+  background-color: rgb(7, 90, 90);
+  color: white;
+}
+button.btn-icon {
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: #0f0f0f;
+}
+header button img {
+  width: 100%;
+}
+
+/*Styling Main Section of Homepage*/
+main {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  color: white;
+}
+main .category-bar {
+  padding: 12px;
+}
+main .category-bar ul {
+  display: flex;
+}
+main .category-bar li {
+  list-style: none;
+}
+main .category-bar li a {
+  color: #fff;
+  text-decoration: none;
+  background-color: #272727;
+  padding: 12px;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-right: 12px;
+}
+main .videos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+  padding: 12px;
+}
+main .videos-grid .video-card .thumbnail-img-container {
+  border-radius: 10px;
+  overflow: hidden;
+  height: 170px;
+}
+main .videos-grid .video-card .thumbnail-img-container img {
+  width: 100%;
+}
+main .video-card .video-meta-container p {
+  margin: 0 0 4px 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+main .video-card h3 {
+  font-size: 17px;
+  line-height: 1.4rem;
+  margin: 0 0 8px 0;
+}
+main .video-card .video-meta-container {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  grid-gap: 16px;
+  margin: 16px 0;
+}
+main .videos-grid .video-card .channel-avtar-container {
+  width: 36px;
+  height: 36px;
+  margin-right: 16px;
+}
+main .videos-grid .video-card .channel-avtar-container img {
+  width: 100%;
+  border-radius: 50%;
+}
+/*Styling Aside Section Of Homepage*/
+
+aside {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  padding: 0 5px 0 5px;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+/*Collapsed Menu Styling*/
+aside .menu-collapsed ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+aside .menu-collapsed ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 0 10px 0;
+  display: block;
+  border-radius: 10px;
+}
+aside .menu-collapsed ul li a:hover {
+  background-color: #272727;
+}
+aside .menu-collapsed ul li a .menu-item-content {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+aside .menu-collapsed ul li a img {
+  width: 24px;
+}
+aside .menu-collapsed ul li a .menu-item-content svg {
+  width: 28px;
+}
+aside .menu-collapsed ul li a span {
+  font-weight: 300;
+  font-size: 10px;
+  margin-top: 8px;
+}
+
+/*Expanded Menu Styling*/
+
+aside .menu-expanded .expanded-menu-list {
+  padding: 10px;
+  border-bottom: 1px solid #272727;
+}
+aside .menu-expanded .expanded-menu-list a {
+  color: #fff;
+  text-decoration: none;
+}
+aside .expanded-menu-list li {
+  list-style: none;
+}
+aside .expanded-menu-list li a {
+  display: flex;
+  align-items: center;
+  /* padding: 12px 0px; */
+  padding: 0 12px;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 10px;
+}
+aside .expanded-menu-list li a:hover,
+aside .expanded-menu-list li a.active {
+  background: #272727;
+}
+
+aside .expanded-menu-list a img,
+aside .expanded-menu-list a svg {
+  width: 24px;
+  margin-right: 20px;
+}
